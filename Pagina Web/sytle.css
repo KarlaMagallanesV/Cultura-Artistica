@@ -1,0 +1,48 @@
+body{
+  background-color: rgb(240, 200, 219);
+}
+
+
+#titulo{
+    color: rgb(110, 37, 206);
+    font-size: 45px;
+}
+
+#genero{
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+}
+
+#ficcion{
+  color: rgb(70, 31, 214);  
+  font-size: 30px;
+  font-family:'Times New Roman', Times, serif
+}
+#no_ficcion{
+  color: rgb(238, 15, 126);  
+  font-size: 30px;
+  font-family:'Times New Roman', Times, serif
+}
+
+#autoayuda{
+  color: rgb(12, 92, 212);  
+  font-size: 30px;
+  font-family:'Times New Roman', Times, serif
+}
+
+  table {
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #000000;
+  }
+
+#boton1{
+  background-color: rgb(219, 60, 166);
+}
+#boton2{
+  background-color: rgb(82, 219, 18);
+}
+#boton3{
+  background-color: rgb(115, 190, 240);
+}
