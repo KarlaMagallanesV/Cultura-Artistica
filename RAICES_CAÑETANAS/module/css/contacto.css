@@ -1,0 +1,333 @@
+/* ------------------------------------------------------------ */
+/* Borde Equipo */
+@keyframes borderColor {
+    0% {
+        border-color: rgb(255, 0, 0); /* Rojo */
+    }
+    16% {
+        border-color: rgb(255, 165, 0); /* Naranja */
+    }
+    33% {
+        border-color: rgb(255, 255, 0); /* Amarillo */
+    }
+    50% {
+        border-color: rgb(0, 255, 0); /* Verde */
+    }
+    66% {
+        border-color: rgb(0, 255, 255); /* Cian */
+    }
+    83% {
+        border-color: rgb(0, 0, 255); /* Azul */
+    }
+    100% {
+        border-color: rgb(255, 0, 255); /* Magenta */
+    }
+}
+
+/* ------------------------------------------------------------ */
+/* Sección del Equipo */
+.team-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.team-title {
+    font-size: 2rem;
+    color: #1a73e8; /* Cambiado a azul */
+    margin-bottom: 10px;
+}
+
+.team-subtitle {
+    font-size: 1.2rem;
+    color: #777;
+    margin: 20px 0; /* Margen para separar del título */
+}
+
+.team-description {
+    font-size: 1rem;
+    color: #555;
+    margin: 20px 0; /* Margen para separar del subtítulo */
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-member {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s;
+    overflow: hidden;
+    border: 5px solid transparent; 
+    animation: borderColor 3s linear infinite; 
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.5s ease;
+}
+
+.team-member h5 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    max-height: 100px; 
+    overflow: hidden; 
+    transition: max-height 0.5s ease;
+}
+
+.team-member.active p {
+    max-height: 300px; 
+}
+
+.team-member .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.team-member .social-links a {
+    font-size: 1.5rem;
+    color: #555;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member:hover .profile-img {
+    transform: rotate(10deg);
+}
+
+.team-member .social-links a:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+
+
+/* ------------------------------------------------------------------------- */
+
+/*Preguntas Frecuentes*/
+
+
+/* pregunta1*/
+.preguntas1-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f8f8f8;
+}
+
+.preguntas1-text {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.preguntas1-text h2 {
+    font-size: 2.5rem;
+    color: #E76A24;
+}
+
+.preguntas1-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.preguntas1-image {
+    width: 45%;
+}
+
+.preguntas1-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* --------------------------------------------------------- */
+/* preguntas2 */
+
+.preguntas-frecuentes {
+    text-align: center;  
+    color: #e03b3b;     
+    font-size: 2.5rem;  
+    margin: 20px 0;     
+}
+
+.preguntas2-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f8f8f8;
+}
+
+.preguntas2-propuestos-image {
+    width: 45%;
+}
+
+.preguntas2-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.preguntas2-text {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.preguntas2-text h2 {
+    font-size: 2.5rem;
+    color: #E76A24;
+}
+
+.preguntas2-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+/* --------------------------------------------------------- */
+/* preguntas3 */
+.preguntas3-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f8f8f8;
+}
+
+.preguntas3-propuestos-image {
+    width: 45%;
+}
+
+.preguntas3-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.preguntas3-text {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.preguntas3-text h2 {
+    font-size: 2.5rem;
+    color: #E76A24;
+}
+
+.preguntas3-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+/* ----------------------------------------------------------------------- */
+
+/* Estilos para el formulario */
+
+
+.container.contact-form {
+    flex: 1;
+    max-width: 45%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #88C69C;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(17, 17, 17, 0.548);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-form .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form .input-wrapper {
+    position: relative;
+}
+
+.contact-form .input-wrapper i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #007bff;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: calc(100% - 40px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    margin-left: 30px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: #F44336;
+    font-size: 0.875em;
+    display: block;
+    margin-top: 5px;
+}
+
+.error-message::before {
+    content: "⚠ ";
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de | Contacto</title>
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="/RAICES_CAÑETANAS/css/RC.css">
+    <link rel="stylesheet" href="/RAICES_CAÑETANAS/html/css/acerca-de.css">
+    <link rel="stylesheet" href="/RAICES_CAÑETANAS/html/css/footer.css">
+    <link rel="stylesheet" href="/RAICES_CAÑETANAS/html/css/contactanos.css">
+</head>
+<!-- Sección del Navbar -->
+
+<body class="bg-light">
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="/RAICES_CAÑETANAS/RC.html" class="logo">RAICES CAÑETANAS</a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="/RAICES_CAÑETANAS/RC.html" class="nav-link active">Inicio</a></li>
+            <li>
+                <a href="/RAICES_CAÑETANAS/RC.html" class="nav-link">Tienda Online</a>
+                <ul class="submenu">
+                    <li><a href="/RAICES_CAÑETANAS/panes/panaderia.html" class="submenu-link">Panadería</a></li>
+                    <li><a href="/RAICES_CAÑETANAS/panes/postres.html" class="submenu-link">Postres</a></li>
+                    <li><a href="/RAICES_CAÑETANAS/panes/pasteles-salados.html" class="submenu-link">Pasteles
+                            Salados</a></li>
+                    <li><a href="/RAICES_CAÑETANAS/panes/bolleria.html" class="submenu-link">Bollería</a></li>
+                </ul>
+            </li>
+            <li><a href="/RAICES_CAÑETANAS/html/nuestra-historia.html" class="nav-link">Nuestra Historia</a></li>
+            <li><a href="/RAICES_CAÑETANAS/html/acerca-de.html" class="nav-link">Acerca de</a></li>
+            <li><a href="/RAICES_CAÑETANAS/html/contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección del banner con imagen -->
+    <section class="banner">
+        <img src="https://lacristina.pe/cdn/shop/files/market_-_desktop_720x.jpg?v=1677084830" alt="Nuestra Historia"
+            class="banner-img">
+        <div class="banner-text">
+            <h1>Nuestra Tienda</h1>
+        </div>
+    </section>
+
+    <!-- Sección de Contactanos -->
+    <section class="contact-rc">
+        <h1 class="logo">Contáctanos</h1>
+        <div class="contact-wrapper animated bounceInUp">
+            <div class="contact-form">
+                <h3>Contáctanos</h3>
+                <form id="contactForm">
+                    <p>
+                        <label>Nombres:</label>
+                        <input type="text" id="firstName" name="firstname">
+                        <span class="error-message" id="firstNameError"></span>
+                    </p>
+                    <p>
+                        <label>Apellidos:</label>
+                        <input type="text" id="lastName" name="lastname">
+                        <span class="error-message" id="lastNameError"></span>
+                    </p>
+                    <p>
+                        <label>Correo Electrónico:</label>
+                        <input type="email" id="email" name="email">
+                        <span class="error-message" id="emailError"></span>
+                    </p>
+                    <p>
+                        <label>Número de Teléfono:</label>
+                        <input type="tel" id="phone" name="phone">
+                        <span class="error-message" id="phoneError"></span>
+                    </p>
+                    <p class="block">
+                        <label>Mensaje:</label>
+                        <textarea id="message" name="message" rows="3"></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </p>
+                    <p class="block">
+                        <button type="submit">Enviar</button>
+                    </p>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h4>Más Información</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Calle Baker</li>
+                    <li><i class="fas fa-phone"></i> (111) 111 111 111</li>
+                    <li><i class="fas fa-envelope-open-text"></i> contacto@website.com</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus
+                    repellendus?</p>
+                <p>Company.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion para ir a ods-->
+    <section class="section">
+        <img src="data:image/png;base64,iVBORw0KGgo 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"
+            alt="Imagen de ejemplo" class="section-image">
+        <h2 class="section-title">SALUD Y BIENESTAR</h2>
+        <p class="section-description"> Nosotros promovemos el Objetivo de Desarrollo Sostenible 3 ¿Te gustaria conocer mas sobre ella? </p>
+
+        <a href="/RAICES_CAÑETANAS/module/html/Principal.html" class="button">Ir a Otra Página</a>
+    </section>
+
+    <!-- Sección de Pie de Página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Nuestro objetivo (Izquierda) -->
+            <div class="footer-informacion">
+                <h3>Nuestro objetivo</h3>
+                <p>Ser una organización que promueve la igualdad, la inclusión y el desarrollo sostenible en América
+                    Latina.</p>
+            </div>
+            <!-- Contacto (Centro) -->
+            <div class="footer-content">
+                <h3>Contacto</h3>
+                <p>
+                    Calle 123, 456, CABA<br>
+                    Teléfono: +54 11 1234 5678<br>
+                    Email: info@raicescanetanas.com
+                </p>
+            </div>
+            <!-- Redes Sociales (Derecha) -->
+            <div class="footer-social">
+                <h3>Síguenos en redes sociales</h3>
+                <div class="social-icons">
+                    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="tiktok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Archivo JS -->
+    <script src="/RAICES_CAÑETANAS/js/RC.js"></script>
+    <script src="/RAICES_CAÑETANAS/js/footer.js"></script>
+    <script src="/RAICES_CAÑETANAS/js/contacto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

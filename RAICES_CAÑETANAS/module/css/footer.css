@@ -1,0 +1,100 @@
+/* El contenido debe ocupar todo el espacio disponible menos el footer */
+.content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos del footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;  /* Aumentamos el padding para hacer el footer más alto */
+    width: 100%;
+}
+
+/* Contenedor principal del footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;  /* Alineación superior de los elementos */
+    width: 90%;
+    margin: 0 auto;
+    gap: 30px;  /* Espacio entre las secciones */
+}
+
+/* Estilos de cada sección dentro del footer */
+.footer-informacion, 
+.footer-content, 
+.footer-social {
+    flex: 1;
+}
+
+/* Alineación específica de las secciones */
+.footer-informacion {
+    text-align: left;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-social {
+    text-align: right;
+}
+
+/* Estilo para los párrafos dentro del footer */
+.footer p {
+    margin: 10px 0;  /* Espaciado entre párrafos */
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+}
+
+/* Iconos sociales */
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 10px;  /* Espacio entre el título y los iconos */
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Colores al pasar el mouse por los iconos */
+.youtube:hover {
+    color: #FF0000;
+}
+
+.tiktok:hover {
+    color: #69C9D0;
+}
+
+.whatsapp:hover {
+    color: #25D366;
+}
+
+.instagram:hover {
+    color: #E4405F;
+}
+
+/* Animación de rotación */
+.rotate-animation {
+    animation: rotate 1s ease-in-out;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

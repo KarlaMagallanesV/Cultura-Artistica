@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Salsa&display=swap");
+
+/* Estilos para la sección Voluntariado ODS 3 */
+.voluntariado-ods-title {
+    text-align: center; /* Centrar el texto */
+    font-size: 2.5rem; /* Aumentar el tamaño del título */
+    color: #69D0A3; /* Color especificado */
+    margin: 30px 0 10px; /* Margen superior aumentado, inferior manteniendo el espacio */
+    font-weight: bold; /* Negrita para mayor énfasis */
+}
+
+
+
+
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+/* content */
+
+.content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    top: 14%;
+    left: 3%;
+    width: 40%;
+    height: max-content;
+    color: #f2f2f2;
+    text-align: left;
+    padding: 20px;
+    opacity: 0;
+    z-index: 2;
+}
+
+.content h1 {
+    font-family: "Salsa", cursive;
+    font-size: clamp(2rem, 3vw, 6rem);
+    margin-bottom: 20px;
+    opacity: 0;
+}
+
+.content p {
+    font-family: inherit;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: 500;
+    opacity: 0;
+}
+
+.swiper-slide-active .content {
+    opacity: 1;
+}
+
+.swiper-slide-active .content h1 {
+    animation: moveDown 0.8s ease-in forwards;
+}
+
+.swiper-slide-active .content p {
+    animation: moveDown 1s ease-in forwards;
+    animation-delay: 1s;
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Imagenes de Fondo */
+
+.background[data-item="one"] {
+    background: url("/RAICES_CAÑETANAS/module/images_voluntariado/Lima_Peru.jpg");
+    background-size: cover;
+    background-position: 50% 40%;
+}
+
+.background[data-item="two"] {
+    background: url("/RAICES_CAÑETANAS/module/images_voluntariado/Corea_Seul.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.background[data-item="three"] {
+    background: url("/RAICES_CAÑETANAS/module/images_voluntariado/Sudafrica.jpg");
+    background-size: cover;
+    background-position: 50% 40%;
+}
+
+.background[data-item="four"] {
+    background: url("/RAICES_CAÑETANAS/module/images_voluntariado/nepal.jpg");
+    background-size: cover;
+    background-position: 50% 60%;
+}
+
+.background[data-item="five"] {
+    background: url("/RAICES_CAÑETANAS/module/images_voluntariado/Peru_losOlivos.jpg");
+    background-size: cover;
+    background-position: 50% 40%;
+}
+
+.background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(5%);
+    filter: brightness(90%);
+    overflow: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+
+.animation {
+    animation: resizeClipPath 1s ease-in-out forwards;
+}
+
+@keyframes resizeClipPath {
+    0% {
+        clip-path: circle(5%);
+        opacity: 0;
+    }
+
+    100% {
+        clip-path: circle(71%);
+        opacity: 1;
+    }
+}
+
+/* paginacion  */
+
+.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background-color: #a3a6a3;
+    border-radius: 50%;
+    transition: all 1s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+    height: 32px;
+    background-image: linear-gradient(180deg,#73af91 0%, #00689D 100%);
+    border-radius: 14px;
+}
+
+/* menu */
+
+.footer-sec {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    bottom: 0;
+    left: 50%;
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    width: max-content;
+    padding: 20px;
+    color: #ffffff;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde Menu */
+    background: rgba(255, 255, 255, 0.1); /*Fondo Menu*/
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    z-index: 2;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.feature i {
+    font-size: 1.4rem;
+}
+
+.feature p {
+    font-weight: 700;
+}
+
+/*Boton de mas informacion*/
+.btn {
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 15px 20px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 14px -7px #27bde2;
+    background-image: linear-gradient(45deg,
+            #66bb6a 0%,
+            #00699d 51%,
+            #66bb6a 100%);
+    background-size: 200% auto;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-position: right center;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}

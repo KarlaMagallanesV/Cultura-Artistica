@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODS 3 | Salud y Bienestar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="/RAICES_CAÑETANAS/module/css/Principal.css">
+    <link rel="stylesheet" href="/RAICES_CAÑETANAS/module/css/galeria.css">
+    <link rel="stylesheet" href="/RAICES_CAÑETANAS/module/css/linea-tiempo.css">
+    <link rel="stylesheet" href="/RAICES_CAÑETANAS/module/css/footer.css">
+</head>
+    <!-- Seccion del Nvar -->
+<body class="bg-light">
+    <nav class="navbar">
+        <div class="logo-container">
+            <!-- Logo -->
+            <a href="/RAICES_CAÑETANAS/module/html/Principal.html" class="logo">Salud Y Bienestar</a>
+        </div>
+
+        <ul class="nav-menu">
+            <li>
+                <a href="/RAICES_CAÑETANAS/module/html/Principal.html" class="nav-link active">Inicio</a>
+            </li>
+            <li>
+                <a href="/RAICES_CAÑETANAS/module/html/sobre-nosotros.html" class="nav-link">Sobre Nosotros</a>
+            
+            </li>
+            <li>
+                <a href="/RAICES_CAÑETANAS/module/html/galeria.html" class="nav-link">Galeria</a>
+            </li>
+            <li>
+                <a href="/RAICES_CAÑETANAS/module/html/recursos.html" class="nav-link">Recursos</a>
+            </li>
+            <li>
+                <a href="/RAICES_CAÑETANAS/module/html/contacto.html" class="nav-link">Contacto</a>
+            </li>
+            <li>
+                <a href="/RAICES_CAÑETANAS/RC.html" class="nav-link">Salir</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Sección del banner con video ODS -->
+    <section class="banner">
+        <video class="banner-video" autoplay muted loop playsinline>
+            <source src="/RAICES_CAÑETANAS/module/banners/galeria.mp4" type="video/mp4">
+        </video>
+        <div class="banner-text">
+            <h1>Galería</h1>
+            <h1>Salud y Bienestar</h1>
+        </div>
+    </section>
+
+    <!-- Secion carrucel imagenes-->
+    <section class="carousel">
+        <div class="carousel-wrapper">
+            <div class="carousel-item">
+                <img src="/RAICES_CAÑETANAS/module/image/1.jpg" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+                <img src="/RAICES_CAÑETANAS/module/image/2.jpg" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+                <img src="/RAICES_CAÑETANAS/module/image/3.jpg" alt="Imagen 3">
+            </div>
+            <div class="carousel-item">
+                <img src="/RAICES_CAÑETANAS/module/image/4.jpg" alt="Imagen 4">
+            </div>
+            <div class="carousel-item">
+                <img src="/RAICES_CAÑETANAS/module/image/5.jpg" alt="Imagen 5">
+            </div>
+            <div class="carousel-item">
+                <img src="/RAICES_CAÑETANAS/module/image/6.jpg" alt="Imagen 6">
+            </div>
+            <div class="carousel-item">
+                <img src="/RAICES_CAÑETANAS/module/image/7.jpg" alt="Imagen 7">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sección galería de imágenes con opciones -->
+    <section class="image-gallery">
+        <h2>Galería de Imágenes</h2>
+        <div class="gallery">
+            <div class="image-item">
+                <img src="/RAICES_CAÑETANAS/module/img/imagen1.jpg" alt="Imagen 1" class="gallery-img">
+                <div class="overlay">
+                    <a href="#" class="icon" onclick="ampliarImagen('/RAICES_CAÑETANAS/module/img/imagen1.jpg')"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="icon" onclick="compartir('/RAICES_CAÑETANAS/module/img/imagen1.jpg')"><i class="fas fa-share-alt"></i></a>
+                    <a href="/RAICES_CAÑETANAS/module/img/imagen1.jpg" download class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/RAICES_CAÑETANAS/module/img/imagen2.jpg" alt="Imagen 2" class="gallery-img">
+                <div class="overlay">
+                    <a href="#" class="icon" onclick="ampliarImagen('/RAICES_CAÑETANAS/module/img/imagen2.jpg')"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="icon" onclick="compartir('/RAICES_CAÑETANAS/module/img/imagen2.jpg')"><i class="fas fa-share-alt"></i></a>
+                    <a href="/RAICES_CAÑETANAS/module/img/imagen2.jpg" download class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/RAICES_CAÑETANAS/module/img/imagen3.jpg" alt="Imagen 3" class="gallery-img">
+                <div class="overlay">
+                    <a href="#" class="icon" onclick="ampliarImagen('/RAICES_CAÑETANAS/module/img/imagen3.jpg')"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="icon" onclick="compartir('/RAICES_CAÑETANAS/module/img/imagen3.jpg')"><i class="fas fa-share-alt"></i></a>
+                    <a href="/RAICES_CAÑETANAS/module/img/imagen3.jpg" download class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/RAICES_CAÑETANAS/module/img/imagen4.jpg" alt="Imagen 4" class="gallery-img">
+                <div class="overlay">
+                    <a href="#" class="icon" onclick="ampliarImagen('/RAICES_CAÑETANAS/module/img/imagen4.jpg')"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="icon" onclick="compartir('/RAICES_CAÑETANAS/module/img/imagen4.jpg')"><i class="fas fa-share-alt"></i></a>
+                    <a href="/RAICES_CAÑETANAS/module/img/imagen4.jpg" download class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/RAICES_CAÑETANAS/module/img/imagen5.jpg" alt="Imagen 5" class="gallery-img">
+                <div class="overlay">
+                    <a href="#" class="icon" onclick="ampliarImagen('/RAICES_CAÑETANAS/module/img/imagen5.jpg')"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="icon" onclick="compartir('/RAICES_CAÑETANAS/module/img/imagen5.jpg')"><i class="fas fa-share-alt"></i></a>
+                    <a href="/RAICES_CAÑETANAS/module/img/imagen5.jpg" download class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/RAICES_CAÑETANAS/module/img/imagen6.jpg" alt="Imagen 6" class="gallery-img">
+                <div class="overlay">
+                    <a href="#" class="icon" onclick="ampliarImagen('/RAICES_CAÑETANAS/module/img/imagen6.jpg')"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="icon" onclick="compartir('/RAICES_CAÑETANAS/module/img/imagen6.jpg')"><i class="fas fa-share-alt"></i></a>
+                    <a href="/RAICES_CAÑETANAS/module/img/imagen6.jpg" download class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/RAICES_CAÑETANAS/module/img/imagen7.jpg" alt="Imagen 7" class="gallery-img">
+                <div class="overlay">
+                    <a href="#" class="icon" onclick="ampliarImagen('/RAICES_CAÑETANAS/module/img/imagen7.jpg')"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="icon" onclick="compartir('/RAICES_CAÑETANAS/module/img/imagen7.jpg')"><i class="fas fa-share-alt"></i></a>
+                    <a href="/RAICES_CAÑETANAS/module/img/imagen7.jpg" download class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/RAICES_CAÑETANAS/module/img/imagen8.jpg" alt="Imagen 8" class="gallery-img">
+                <div class="overlay">
+                    <a href="#" class="icon" onclick="ampliarImagen('/RAICES_CAÑETANAS/module/img/imagen8.jpg')"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="icon" onclick="compartir('/RAICES_CAÑETANAS/module/img/imagen8.jpg')"><i class="fas fa-share-alt"></i></a>
+                    <a href="/RAICES_CAÑETANAS/module/img/imagen8.jpg" download class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/RAICES_CAÑETANAS/module/img/imagen9.jpg" alt="Imagen 9" class="gallery-img">
+                <div class="overlay">
+                    <a href="#" class="icon" onclick="ampliarImagen('/RAICES_CAÑETANAS/module/img/imagen9.jpg')"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="icon" onclick="compartir('/RAICES_CAÑETANAS/module/img/imagen9.jpg')"><i class="fas fa-share-alt"></i></a>
+                    <a href="/RAICES_CAÑETANAS/module/img/imagen9.jpg" download class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/RAICES_CAÑETANAS/module/img/imagen10.jpg" alt="Imagen 10" class="gallery-img">
+                <div class="overlay">
+                    <a href="#" class="icon" onclick="ampliarImagen('/RAICES_CAÑETANAS/module/img/imagen10.jpg')"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="icon" onclick="compartir('/RAICES_CAÑETANAS/module/img/imagen10.jpg')"><i class="fas fa-share-alt"></i></a>
+                    <a href="/RAICES_CAÑETANAS/module/img/imagen10.jpg" download class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/RAICES_CAÑETANAS/module/img/imagen11.jpg" alt="Imagen 11" class="gallery-img">
+                <div class="overlay">
+                    <a href="#" class="icon" onclick="ampliarImagen('/RAICES_CAÑETANAS/module/img/imagen11.jpg')"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="icon" onclick="compartir('/RAICES_CAÑETANAS/module/img/imagen11.jpg')"><i class="fas fa-share-alt"></i></a>
+                    <a href="/RAICES_CAÑETANAS/module/img/imagen11.jpg" download class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/RAICES_CAÑETANAS/module/img/imagen12.jpg" alt="Imagen 12" class="gallery-img">
+                <div class="overlay">
+                    <a href="#" class="icon" onclick="ampliarImagen('/RAICES_CAÑETANAS/module/img/imagen12.jpg')"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="icon" onclick="compartir('/RAICES_CAÑETANAS/module/img/imagen12.jpg')"><i class="fas fa-share-alt"></i></a>
+                    <a href="/RAICES_CAÑETANAS/module/img/imagen12.jpg" download class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para ampliar imagen -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="cerrarImagen()">&times;</span>
+        <img class="modal-content" id="imgAmpliada">
+    </div>
+
+
+
+     <!-- Sección línea de tiempo -->
+     <section class="timeline-section">
+        <h1>Línea de Tiempo</h1>
+        <ul>
+            <li style="--accent-color:#41516C">
+                <div class="date" onclick="showContent(0)">2002</div>
+                <div class="title">Title 1</div>
+                <div class="descr" id="descr-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!</div>
+            </li>
+            <li style="--accent-color:#FBCA3E">
+                <div class="date" onclick="showContent(1)">2007</div>
+                <div class="title">Title 2</div>
+                <div class="descr" id="descr-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos adipisci nobis nostrum vero nihil veniam.</div>
+            </li>
+            <li style="--accent-color:#E24A68">
+                <div class="date" onclick="showContent(2)">2012</div>
+                <div class="title">Title 3</div>
+                <div class="descr" id="descr-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga minima consequuntur soluta placeat iure totam commodi repellendus ea delectus, libero fugit quod reprehenderit, sequi quo, et dolorum saepe nulla hic.</div>
+            </li>
+            <li style="--accent-color:#1B5F8C">
+                <div class="date" onclick="showContent(3)">2017</div>
+                <div class="title">Title 4</div>
+                <div class="descr" id="descr-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.</div>
+            </li>
+            <li style="--accent-color:#4CADAD">
+                <div class="date" onclick="showContent(4)">2022</div>
+                <div class="title">Title 5</div>
+                <div class="descr" id="descr-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</div>
+            </li>
+        </ul>
+    </section>
+
+
+
+
+    <!-- Sección de videos de YouTube sobre ODS 3 -->
+    <section class="video-gallery">
+        <h2>Videos sobre ODS 3</h2>
+        <div class="video-grid">
+            <div class="video-item">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/QnO_LE8jk0A?si=daO4J4TdbNTeKfq4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-options">
+                    <a href="#" class="icon" onclick="compartir('https://www.youtube.com/watch?v=someVideoID')"><i class="fas fa-share-alt"></i></a>
+                    <a href="https://www.youtube.com/embed/QnO_LE8jk0A?si=daO4J4TdbNTeKfq4" target="_blank" class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/jGVxQG5Qw8w?si=ASQLNzlyASngq5S1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-options">
+                    <a href="#" class="icon" onclick="compartir('https://www.youtube.com/watch?v=someVideoID')"><i class="fas fa-share-alt"></i></a>
+                    <a href="https://www.youtube.com/embed/jGVxQG5Qw8w?si=ASQLNzlyASngq5S1" target="_blank" class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/nhmDez9CkYk?si=EoRSXQq9ihlz7w6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-options">
+                    <a href="#" class="icon" onclick="compartir('https://www.youtube.com/watch?v=someVideoID')"><i class="fas fa-share-alt"></i></a>
+                    <a href="https://www.youtube.com/embed/nhmDez9CkYk?si=EoRSXQq9ihlz7w6o" target="_blank" class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/srRg5Oa5hDI?si=p7sB9ko43jmiZ92R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-options">
+                    <a href="#" class="icon" onclick="compartir('https://www.youtube.com/watch?v=someVideoID')"><i class="fas fa-share-alt"></i></a>
+                    <a href="https://www.youtube.com/embed/srRg5Oa5hDI?si=p7sB9ko43jmiZ92R" target="_blank" class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/AFNCBbOECZw?si=z5jqx89JxixfrVW7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-options">
+                    <a href="#" class="icon" onclick="compartir('https://www.youtube.com/watch?v=someVideoID')"><i class="fas fa-share-alt"></i></a>
+                    <a href="https://www.youtube.com/embed/AFNCBbOECZw?si=z5jqx89JxixfrVW7" target="_blank" class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/Jnqv7fCVX_c?si=O-lDjFZQCIBFOMfo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-options">
+                    <a href="#" class="icon" onclick="compartir('https://www.youtube.com/watch?v=someVideoID')"><i class="fas fa-share-alt"></i></a>
+                    <a href="https://www.youtube.com/embed/Jnqv7fCVX_c?si=O-lDjFZQCIBFOMfo" target="_blank" class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/ulhv16bAqo8?si=tfH1U3xBowkat40J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-options">
+                    <a href="#" class="icon" onclick="compartir('https://www.youtube.com/watch?v=someVideoID')"><i class="fas fa-share-alt"></i></a>
+                    <a href="https://www.youtube.com/embed/ulhv16bAqo8?si=tfH1U3xBowkat40J" target="_blank" class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/221fzcpGg5I?si=aELqbD6BzKAIT2lm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-options">
+                    <a href="#" class="icon" onclick="compartir('https://www.youtube.com/watch?v=someVideoID')"><i class="fas fa-share-alt"></i></a>
+                    <a href="https://www.youtube.com/embed/221fzcpGg5I?si=aELqbD6BzKAIT2lm" target="_blank" class="icon"><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Sección Mapa Interactivo -->
+    <style>
+        #map {
+            width: 80%;
+            height: 400px; 
+            margin: 0 auto; 
+            border: 10px solid #39d661; 
+        }
+
+        /* Estilos para el h2 y p centrados */
+        h2, p {
+            text-align: center; 
+            color: #e03b3b;
+        }
+
+        /* Fondo del contenedor*/
+        .interactive-map {
+            background-color: #f9f2e7; 
+            padding: 2rem 0;
+        }
+
+        h2 {
+            font-size: 2.5rem; 
+            font-weight: bold; 
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
+    </style>
+
+    <section class="interactive-map py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-semibold mb-8">Mapa Interactivo</h2>
+            <p class="text-lg mb-6">Explora las ubicaciones en el mapa a continuación. Haz clic en los marcadores para obtener más detalles.</p>
+            <div id="map" class="rounded-lg shadow-lg"></div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Sección de Pie de Página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Nuestro objetivo (Izquierda) -->
+            <div class="footer-informacion">
+                <h3>Nuestro objetivo</h3>
+                <p>
+                    Ser una organización que promueve la igualdad, la inclusión y el desarrollo sostenible en América Latina.
+                </p>
+            </div>
+        
+            <!-- Contacto (Centro) -->
+            <div class="footer-content">
+                <h3>Contacto</h3>
+                <p>
+                    Calle 123, 456, CABA<br>
+                    Teléfono: +54 11 1234 5678<br>
+                    Email: info@raicescanetanas.com
+                </p>
+            </div>
+        
+            <!-- Redes Sociales (Derecha) -->
+            <div class="footer-social">
+                <h3>Síguenos en redes sociales</h3>
+                <div class="social-icons">
+                    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="tiktok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Archivo JS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="/RAICES_CAÑETANAS/js/RC.js"></script>
+    <script src="/RAICES_CAÑETANAS/module/js/linea-tiempo.js"></script>
+    <script src="/RAICES_CAÑETANAS/module/js/carrucel-imagenes.js"></script>
+    <script src="/RAICES_CAÑETANAS/module/js/galeria.js"></script>
+    <script src="/RAICES_CAÑETANAS/module/js/footer.js"></script>
+</body>
+</html>

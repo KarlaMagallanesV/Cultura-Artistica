@@ -1,0 +1,76 @@
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ----------------------------------------------------- */
+
+/* Estilos de Quien es*/
+.quien-es-rc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f8f8f8;
+}
+
+.quien-es-rc .texto {
+    width: 50%;
+}
+
+.quien-es-rc h2 {
+    font-size: 2.5rem;
+    color: #E76A24;
+}
+
+.quien-es-rc .subtitulo {
+    font-size: 1.2rem;
+    color: #E76A24;
+    margin-bottom: 20px;
+}
+
+.quien-es-rc p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.quien-es-rc .fotos {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quien-es-rc .polaroid {
+    width: 100%;
+    max-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transform: rotate(-5deg);
+    transition: transform 0.2s;
+}
+
+.quien-es-rc .polaroid:hover {
+    transform: rotate(0deg);
+}
