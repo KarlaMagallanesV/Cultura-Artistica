@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Playlist+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>80s Music Facts</title>
+</head>
+
+<body>
+    <!-- Reproductor de Audio -->
+    <audio id="background-music" loop>
+        <source src="/audio/Snow Flower (feat. Peakboy).mp3" type="audio/mpeg" />
+        <source src="/audio/Kiss - I Was Made For Lovin' You.mp3" type="audio/mpeg" />
+        La musica no es soportada por tu navegador
+    </audio>
+
+    <header>
+        <!-- Contenedor del Título y Autor -->
+        <div class="song-info">
+            <h2 id="song-title">Snow Flower</h2>
+            <p id="song-author">Peakboy</p>
+        </div>
+        <!-- Contenedor de Imagenes de las Canciones -->
+        <div class="song-image-container" id="song-image-container">
+            <img src="/img-music/music-1.jpeg" alt="music-1" class="song-image" />
+            <img src="/img-music/music-2.jpeg" alt="music-2" class="song-image" />
+        </div>
+
+        <!-- Reproductor de Musica -->
+        <div class="player">
+            <ion-icon class="prev-next" name="play-back-outline"></ion-icon>
+            <div>
+                <button id="play-pause-button">
+                    <ion-icon class="audio-icon" id="play-music" name="play-outline"></ion-icon>
+                    <ion-icon class="audio-icon hidden" id="pause-music" name="pause-outline"></ion-icon>
+                </button>
+            </div>
+            <ion-icon class="prev-next" name="play-forward-outline"></ion-icon>
+        </div>
+
+        <!-- Canvas para las ondas musicales -->
+        <div class="music-waves">
+            <canvas id="waves"></canvas>
+        </div>
+    </header>
+
+    <main>
+        <div class="item fact short">
+            <p>
+                From "Footloose" to "Top Gun," the 80s produced some of the most
+                memorable movie soundtracks. These songs not only defined films but
+                also became part of the cultural soundtrack of the decade.
+            </p>
+        </div>
+
+        <div class="item frame long">
+            <img src="images/back-to-80s.jpg" alt="" />
+        </div>
+
+        <div class="item fact short">
+            <p>
+                In 1981, MTV (Music Television) made its debut, forever changing the
+                way we experience music by bringing visuals to the forefront.
+            </p>
+        </div>
+
+        <div class="item frame long top">
+            <img src="images/freddy.jpg" alt="" />
+        </div>
+
+        <div class="item frame long">
+            <img src="images/mj.jpg" alt="" />
+        </div>
+
+        <div class="item fact long">
+            <p>
+                Rolling Stone said that Michael Jackson's Thriller made music videos
+                really cool. It was super long, about fourteen minutes, and crazy
+                expensive – the most expensive video ever at that time, costing half a
+                million dollars! The person in charge, John Landis, called Thriller a
+                story about growing up. He thought the characters growing hair and
+                becoming werewolves was like a symbol for going through teenage
+                changes.
+            </p>
+        </div>
+
+        <div class="item fact short">
+            <p>
+                Rock legends ruled the airwaves with anthems that are still belted out
+                today. Journey's "Don't Stop Believin'" and Queen's "Another One Bites
+                the Dust" became timeless classics.
+            </p>
+        </div>
+
+        <div class="item frame long center">
+            <img src="images/rollers.jpg" alt="" />
+        </div>
+
+        <div class="item fact short">
+            <p>
+                The 80s was the era of unforgettable pop tunes. From Wham!'s "Wake Me
+                Up Before You Go-Go" to Katrina and the Waves' "Walking on Sunshine,"
+                the decade was a non-stop party.
+            </p>
+        </div>
+
+        <div class="item frame short">
+            <img src="images/casette-tape.jpg" alt="" />
+        </div>
+
+        <div class="item fact short hide-fact">
+            <p>
+                Big hair, leather, and power ballads dominated the 80s rock scene.
+                Bands like Bon Jovi and Def Leppard ruled the charts, creating an
+                anthemic sound that still echoes in our hearts.
+            </p>
+        </div>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/app.js"></script>
+</body>
+
+</html>

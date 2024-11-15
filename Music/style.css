@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Roboto:wght@300&family=Playfair+Display:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #683683;
+    background: url(images/bg.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Distribuye el espacio entre elementos */
+    align-items: center;
+    width: 70%; /* Ajusta el ancho para mayor espacio */
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin: 30px 0;
+    padding: 16px 30px;
+    gap: 15px; /* Espacio entre la imagen, info y líneas */
+}
+
+.song-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px; /* Ajuste específico del ancho deseado */
+    height: 200px; /* Ajuste específico de la altura deseada */
+    margin-right: 40px; /* Espacio entre la imagen y las líneas */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.song-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la imagen sin deformarla */
+    border-radius: 10px;
+}
+
+/* TÍTULO Y AUTOR DE LA CANCIÓN */
+.song-info {
+    text-align: left;
+    margin-right: 20px;
+}
+
+#song-title {
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    letter-spacing: 2px;
+    user-select: none;
+}
+
+#song-author {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-top: 5px;
+    font-family: "Playfair Display", serif;
+    user-select: none;
+}
+
+/* PLAYER */
+.player {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio entre botones de control */
+    margin-top: 16px;
+    border: 2px solid rgb(218, 250, 215);
+    border-radius: 10px;
+    padding: 8px 16px;
+    color: #fff;
+}
+
+.prev-next {
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.audio-icon {
+    font-size: 2rem;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.audio-icon:hover,
+.prev-next:hover {
+    color: rgb(218, 250, 215);
+}
+
+#play-pause-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 8px; /* Añade un padding alrededor del botón */
+}
+
+#play-pause-button:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+/* MAIN */
+main {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 180px;
+    gap: 30px;
+}
+
+.item {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+}
+
+.short {
+    grid-row: span 1;
+}
+
+.long {
+    grid-row: span 2;
+}
+
+.fact {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    font-weight: 300;
+    font-size: clamp(0.8rem, 4vw, 0.9rem);
+    line-height: 1.5;
+    user-select: none;
+    transform-origin: center top;
+}
+
+.fact:after {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: 50%;
+    width: 10px;
+    aspect-ratio: 1/1;
+    background-color: rgb(171, 33, 33);
+    border-radius: 50%;
+    box-shadow: -5px -5px 6px 1px rgba(0, 0, 0, 0.5) inset;
+    filter: drop-shadow(5px 1px 2px rgba(0, 0, 0, 0.5));
+    z-index: 2;
+}
+
+.fact:hover {
+    animation: swing 0.8s linear infinite forwards alternate;
+    z-index: 5;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(-4deg);
+    }
+
+    100% {
+        transform: rotate(4deg);
+    }
+}
+
+.frame {
+    overflow: hidden;
+}
+
+.frame img {
+    object-fit: cover;
+    object-position: 40% 50%;
+    transition: transform 0.8s;
+}
+
+.frame img:hover {
+    transform: rotate(4deg) scale(1.4);
+}
+
+.center img {
+    object-position: 50% 50%;
+}
+
+.top img {
+    object-position: 50% 0%;
+    transition: transform 0.8s;
+}
+
+.top img:hover {
+    transform: rotate(4deg) scale(1.5) translateY(30px);
+}
+
+/* CANVAS PARA LAS ONDAS */
+#waves {
+    position: fixed; /* Fijar el canvas al lado derecho de la pantalla */
+    top: 50%; /* Centramos el canvas verticalmente */
+    right: 20px; /* Colocamos el canvas a la derecha */
+    width: 200px; /* Ancho reducido */
+    height: 100px; /* Altura reducida */
+    transform: translateY(-50%); /* Centramos verticalmente */
+    z-index: 2; /* Aseguramos que las ondas estén por encima de otros elementos */
+    pointer-events: none; /* Desactiva la interacción con el canvas */
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1200px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    header {
+        width: 60%;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 540px) {
+    header {
+        width: 80%;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
